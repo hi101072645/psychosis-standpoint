@@ -1,0 +1,78 @@
+{
+  "name": "psychosis-standpoint",
+  "version": "1.0.0",
+  "description": "一個關於精神疾病議題立場的小測驗",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "bootstrap": "^4.0.0-beta.2",
+    "clipboard": "^2.0.6",
+    "core-js": "^3.6.4",
+    "element-ui": "^2.13.1",
+    "jquery": "^3.5.0",
+    "node-sass": "^4.14.0",
+    "popper.js": "^1.16.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "swiper": "^5.4.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "ss-loader": "^1.0.1",
+    "style-loader": "^1.2.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": true,
+      "jquery": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-console": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hi101072645/psychosis-standpoint.git"
+  },
+  "keywords": [
+    "test",
+    "psychosis",
+    "standpoint"
+  ],
+  "author": "SHIN LEE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hi101072645/psychosis-standpoint/issues"
+  },
+  "homepage": "https://github.com/hi101072645/psychosis-standpoint#readme"
+}
