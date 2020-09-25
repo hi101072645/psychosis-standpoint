@@ -1,6 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue'
+import index from '@/components/index.vue'
+import Q1 from '@/components/q1.vue'
+// import Q2 from '@/components/q2.vue'
+// import Q3 from '@/components/q3.vue'
+// import Q4 from '@/components/q4.vue'
+// import Answer from '@/components/Answer.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -9,11 +14,14 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
-			component: HelloWorld
+			component: index
+		},{
+			path: '/Q1',
+			component: Q1
 		},
 		{
 			path: '*',
-			component: HelloWorld
+			component: index
 		},
 	],
 });
