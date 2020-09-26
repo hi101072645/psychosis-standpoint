@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import index from '@/components/index.vue'
-import Q1 from '@/components/q1.vue'
-import Q2 from '@/components/q2.vue'
-import Q3 from '@/components/q3.vue'
-import Q4 from '@/components/q4.vue'
 import Result from '@/components/result'
 Vue.use(Router);
 
@@ -15,19 +11,8 @@ export default new Router({
 		{
 			path: '/',
 			component: index
-		},{
-			path: '/Q1',
-			component: Q1
-		},{
-			path: '/Q2',
-			component: Q2
-		},{
-			path: '/Q3',
-			component: Q3
-		},{
-			path: '/Q4',
-			component: Q4
-		},{
+		},
+		{
 			path: '/result',
 			component: Result
 		},{

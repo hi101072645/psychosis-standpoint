@@ -1,13 +1,11 @@
 <template>
   <div class="button-group">
-    <router-link
-        to="Q1"
+    <button
         @click.native="backStep"
-        class="button">返回</router-link>
-    <router-link
-        to="Q1"
+        class="button">返回</button>
+    <button
         @click.native="nextStep"
-        class="button">下一頁</router-link>
+        class="button">下一頁</button>
   </div>
 </template>
 

@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     GetStep() {
-      this.showStep += 1
+      this.nowStep += 1
     },
     showAns(name, answer) {
       this.answer[name] = answer
