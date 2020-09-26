@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <step></step>
-    <router-view></router-view>
+    <div class="wrap">
+      <step :step="nowStep"></step>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-
+import './sass/main.scss'
 import index from './components/index.vue'
 import step from './components/step.vue'
 
@@ -15,17 +17,12 @@ export default {
   components: {
     index,
     step
+  },
+  data() {
+    return {
+      nowStep: 0
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

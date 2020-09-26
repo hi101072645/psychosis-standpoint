@@ -1,0 +1,32 @@
+@import "./reset";
+@import "./var";
+
+
+.greeting {
+  text-align: center;
+  width: 100%;
+}
+
+// === 首頁 ===
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+
+// 按鈕
+.button-start {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  background: $contract;
+  color: white;
+  border-radius: 5px;
+}

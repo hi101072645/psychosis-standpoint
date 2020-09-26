@@ -1,6 +1,6 @@
 <template>
   <div class="step">
-   {{ nowStep }}
+    <div v-if="nowStep">{{ nowStep }}</div>
   </div>
 </template>
 
@@ -8,11 +8,11 @@
 export default {
   name: 'step',
   props: {
-    msg: String
+    step: Number
   },
   data() {
     return {
-      nowStep: 1
+      nowStep: this.step
     }
   }
 }

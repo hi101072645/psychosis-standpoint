@@ -1,1 +1,29 @@
 @import "./reset";
+@import "./var";
+
+
+body {
+  min-height: 100vh;
+  background-color: $main-color;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.step {
+  position: fixed;
+  & > div {
+    height: 5px;
+    background-color: red;
+  }
+}
+
+.el-radio.radio-selection {
+  display: block;
+}
