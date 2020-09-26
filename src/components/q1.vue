@@ -9,11 +9,12 @@
             :id="idx"
             @option-change="pageAnswer"></radio>
       </div>
-      <router-link
-          :disabled="true"
-          to="Q2"
-          @click.native="getAnswer"
-          class="button-start">123</router-link>
+
+<!--      <router-link-->
+<!--          :disabled="true"-->
+<!--          to="Q2"-->
+<!--          @click.native="getAnswer"-->
+<!--          class="button-start">123</router-link>-->
       <span>===========</span>
       <br>
       <span>本頁分數 {{ count }} </span>

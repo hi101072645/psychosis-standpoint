@@ -28,5 +28,43 @@
   font-size: 1.5rem;
   background: $contract;
   color: white;
+  border-width: 0;
   border-radius: 5px;
+  box-shadow: 1px 1px darken( $contract , 10%),
+  2px 2px darken( $contract , 10%),
+  3px 3px darken( $contract , 10%);
+  &:hover {
+    box-shadow: 1px 1px darken( $contract , 10%),
+    2px 2px darken( $contract , 10%);
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.button {
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  background: $contract;
+  color: white;
+  border-width: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px darken( $contract , 10%),
+  2px 2px darken( $contract , 10%),
+  3px 3px darken( $contract , 10%);
+  &:hover {
+    box-shadow: 1px 1px darken( $contract , 10%),
+    2px 2px darken( $contract , 10%);
+  }
+  &:first-child {
+    margin-right: 10px;
+  }
+  &:last-child {
+    margin-left: 10px;
+  }
 }

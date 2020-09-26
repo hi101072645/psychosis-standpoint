@@ -1,5 +1,5 @@
 <template>
-  <div class="step" v-if="showStep">
+  <div class="step">
     <div class="bar"></div>
     <div>步驟: {{ showStep }}</div>
     <div>答案: {{ answer }}</div>
@@ -26,7 +26,10 @@ export default {
     }
   },
   created() {
-    this.$bus.$on('change:step', (msg) => {
+    this.$bus.$on('step:next', (step) => {
+      this.GetStep(step)
+    });
+    this.$bus.$on('step:prev', (msg) => {
       this.GetStep(msg)
     });
     this.$bus.$on('get:answer', (name, ans) => {
@@ -34,8 +37,8 @@ export default {
     })
   },
   methods: {
-    GetStep(step) {
-      this.showStep = step
+    GetStep() {
+      this.showStep += 1
     },
     showAns(name, answer) {
       this.answer[name] = answer

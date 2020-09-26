@@ -25,7 +25,7 @@ export default {
     }
   },
   created() {
-    this.$bus.$on('change:step', (msg) => {
+    this.$bus.$on('step:next', (msg) => {
       this.GetStep(msg)
     });
     this.$bus.$on('get:answer', (name, ans) => {
