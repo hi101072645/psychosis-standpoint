@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrap">
-      <step :step="nowStep"></step>
+      <step></step>
       <router-view></router-view>
     </div>
   </div>
@@ -16,12 +16,14 @@ export default {
   name: 'App',
   components: {
     index,
-    step
+    step,
   },
   data() {
     return {
-      nowStep: 0
     }
+  },
+
+  methods: {
   }
 }
 </script>

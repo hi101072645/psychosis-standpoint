@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">-->
-
+      <h2>我是第4頁</h2>
       <div class="question" v-for="(item, idx) in List">
         <p class="intro">{{ item.desc }}</p>
         <radio
@@ -11,7 +11,7 @@
       </div>
       <router-link
           :disabled="true"
-          to="Q2"
+          to="result"
           @click.native="getAnswer"
           class="button-start">123</router-link>
       <span>===========</span>
@@ -27,7 +27,7 @@
 import radio from './radio'
 
 export default {
-  name: 'q1',
+  name: 'q4',
   components: {
     radio
   },
@@ -65,7 +65,7 @@ export default {
       this.List[id].answer = text
     },
     getAnswer() {
-      this.$bus.$emit('get:answer', 'ans1', this.result);
+      this.$bus.$emit('get:answer', 'ans4', this.result);
     },
   }
 }

@@ -1,28 +1,27 @@
 <template>
-  <div class="step" v-if="showStep">
-    <div class="bar"></div>
-    <div>步驟: {{ showStep }}</div>
-    <div>答案: {{ answer }}</div>
+  <div>
+    <h1 style="padding-top: 100px;">結果是：</h1>
+    <span v-for="item in answer">
+      {{ item.value }}
+    </span>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'step',
+  name: 'Result',
   props: {
-    step: Number,
-    ans: Array
   },
   data() {
     return {
-      showStep: this.step,
+      radio: this.answer,
       answer: {
         ans1: '',
         ans2: '',
         ans3: '',
         ans4: '',
       },
-      nowStep: 0
     }
   },
   created() {
@@ -34,9 +33,6 @@ export default {
     })
   },
   methods: {
-    GetStep(step) {
-      this.showStep = step
-    },
     showAns(name, answer) {
       this.answer[name] = answer
     }
