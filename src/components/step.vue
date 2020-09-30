@@ -1,7 +1,7 @@
 <template>
   <div class="step">
     <div class="bar"></div>
-    <div>步驟: {{ showStep }}</div>
+    <div>步驟: {{ nowStep }}</div>
     <div>答案: {{ answer }}</div>
   </div>
 </template>
@@ -10,12 +10,10 @@
 export default {
   name: 'step',
   props: {
-    step: Number,
     ans: Array
   },
   data() {
     return {
-      showStep: this.step,
       answer: {
         ans1: '',
         ans2: '',
@@ -26,19 +24,22 @@ export default {
     }
   },
   created() {
-    this.$bus.$on('step:next', (step) => {
-      this.GetStep(step)
+    this.$bus.$on('step:next', () => {
+      this.nextStep()
     });
-    this.$bus.$on('step:prev', (msg) => {
-      this.GetStep(msg)
+    this.$bus.$on('step:prev', () => {
+      this.prevStep()
     });
     this.$bus.$on('get:answer', (name, ans) => {
       this.showAns(name, ans)
     })
   },
   methods: {
-    GetStep() {
+    nextStep() {
       this.nowStep += 1
+    },
+    prevStep() {
+      this.nowStep -= 1
     },
     showAns(name, answer) {
       this.answer[name] = answer

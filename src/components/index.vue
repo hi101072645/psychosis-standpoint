@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="fade" appear>
+    <transition name="slide-fade" appear>
       <div class="landing" v-if="landing">
         <h1 class="greeting">歡迎</h1>
         <p>我是一些介紹和宣導語</p>
@@ -47,6 +47,19 @@ export default {
 </script>
 
 <style>
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+
 .fade-leave {
   opacity: 1;
 }

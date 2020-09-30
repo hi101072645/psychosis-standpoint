@@ -1,10 +1,10 @@
 <template>
   <div class="button-group">
     <button
-        @click.native="backStep"
+        @click="backStep"
         class="button">返回</button>
     <button
-        @click.native="nextStep"
+        @click="nextStep"
         class="button">下一頁</button>
   </div>
 </template>
